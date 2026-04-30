@@ -2,21 +2,12 @@ import { useEffect, useState } from "react";
 import { Eye, Trash2, Pencil } from "lucide-react";
 import Button from "../ui/Button";
 import Table from "../ui/Table";
+import { formatDisplayDate } from "../../utils/date";
 
 const statusStyles = {
   running: "bg-primary/10 text-primary",
   pending: "bg-warning/10 text-warning",
   completed: "bg-success/10 text-success",
-};
-
-const formatDisplayDate = (date) => {
-  if (!date) return "";
-
-  return new Date(date).toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
 };
 
 const ITEMS_PER_PAGE = 3;

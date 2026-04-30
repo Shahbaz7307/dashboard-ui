@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Modal from "../ui/Modal";
 import Button from "../ui/Button";
+import { formatDateForInput } from "../../utils/date";
 
 const AddProjectModal = ({ isOpen, onClose, onAdd, onUpdate, editData }) => {
   const [name, setName] = useState("");
@@ -46,13 +47,6 @@ const AddProjectModal = ({ isOpen, onClose, onAdd, onUpdate, editData }) => {
       setDue("");
     }
   }, [editData]);
-
-  const formatDateForInput = (dateString) => {
-    if (!dateString) return "";
-
-    const date = new Date(dateString);
-    return isNaN(date) ? "" : date.toISOString().split("T")[0];
-  };
 
   return (
     <Modal
