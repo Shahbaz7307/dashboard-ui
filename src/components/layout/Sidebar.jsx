@@ -15,16 +15,18 @@ const navItems = [
   { name: "Settings", path: "/settings", icon: Settings },
 ];
 
-const Sidebar = () => {
+const Sidebar = ({ collapsed }) => {
   return (
     <div className="h-full bg-surface border-r border-border p-4 flex flex-col">
-      {/* Logo */}
-      <div className="flex items-center gap-2 text-xl font-semibold mb-8">
+      <div
+        className={`flex items-center text-xl font-semibold mb-8 ${
+          collapsed ? "gap-0 justify-center" : "gap-2"
+        }`}
+      >
         <Hexagon className="h-8 w-8 text-primary" />
-        <span>Donezo</span>
+        {!collapsed && <span className="text-xl font-semibold">Donezo</span>}
       </div>
 
-      {/* Navigation */}
       <nav className="flex-1">
         <ul className="space-y-2">
           {navItems.map((item) => {
@@ -36,7 +38,9 @@ const Sidebar = () => {
                   to={item.path}
                   end={item.path === "/"}
                   className={({ isActive }) =>
-                    `flex items-center gap-3 px-3 py-2 rounded-lg transition-all
+                    `flex items-center ${
+                      collapsed ? "justify-center" : "gap-3"
+                    } px-3 py-2 rounded-lg transition-all
                     ${
                       isActive
                         ? "bg-primary text-white"
@@ -45,7 +49,9 @@ const Sidebar = () => {
                   }
                 >
                   <Icon className="h-5 w-5" />
-                  <span className="text-sm font-medium">{item.name}</span>
+                  {!collapsed && (
+                    <span className="text-sm font-medium">{item.name}</span>
+                  )}
                 </NavLink>
               </li>
             );
@@ -55,13 +61,15 @@ const Sidebar = () => {
 
       <div className="mt-auto pt-4">
         <button
-          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium 
-             text-text-secondary 
-             hover:bg-danger/10 hover:text-danger 
-             transition"
+          className={`w-full flex items-center ${
+            collapsed ? "justify-center" : "gap-3"
+          } px-3 py-2 rounded-lg text-sm font-medium 
+          text-text-secondary 
+          hover:bg-danger/10 hover:text-danger 
+          transition`}
         >
           <LogOut className="h-5 w-5" />
-          Logout
+          {!collapsed && "Logout"}
         </button>
       </div>
     </div>

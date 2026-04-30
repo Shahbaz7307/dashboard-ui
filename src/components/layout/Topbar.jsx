@@ -1,26 +1,23 @@
-import { Bell } from "lucide-react";
+import { Bell, Menu } from "lucide-react";
 import Breadcrumb from "../ui/Breadcrumb";
 import ThemeToggle from "../ui/ThemeToggle";
 
-const Topbar = () => {
+const Topbar = ({ collapsed, setCollapsed }) => {
   return (
     <div className="h-full flex items-center justify-between px-6 bg-surface border-b border-border">
-      {/* Left: Breadcrumb */}
-      <div>
+      <div className="flex items-center gap-4">
+        <button
+          onClick={() => setCollapsed(!collapsed)}
+          className="hidden lg:block p-2 rounded-lg hover:bg-card transition"
+        >
+          <Menu className="h-5 w-5" />
+        </button>
         <Breadcrumb />
       </div>
 
-      {/* Right: Actions */}
       <div className="flex items-center gap-4">
-        {/* Notifications */}
-        {/* <button className="p-2 rounded-lg bg-card border border-border hover:bg-card-muted transition">
-          <Bell className="h-5 w-5" />
-        </button> */}
-
-        {/* Theme Toggle */}
         <ThemeToggle />
 
-        {/* Profile */}
         <div className="flex items-center gap-2 cursor-pointer">
           <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-semibold">
             S
