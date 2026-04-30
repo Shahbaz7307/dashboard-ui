@@ -13,7 +13,7 @@ This project demonstrates real-world frontend architecture including CRUD operat
 
 ## 📸 Screenshots
 
-> Add screenshots here (Dashboard, Users, Orders, Settings)
+> ![Dashboard](./public/screenshots/dashboard.png)
 
 ---
 
@@ -21,60 +21,60 @@ This project demonstrates real-world frontend architecture including CRUD operat
 
 ### 📊 Dashboard
 
-* Stats overview cards
-* Highlight section
-* Recent projects table
-* Charts (Recharts)
-* Search, filter, pagination
+- Stats overview cards
+- Highlight section
+- Recent projects table
+- Charts (Recharts)
+- Search, filter, pagination
 
 ### 👤 Users Management
 
-* Add / Edit / Delete users
-* Search users
-* Modal-based forms
+- Add / Edit / Delete users
+- Search users
+- Modal-based forms
 
 ### 📦 Orders Management
 
-* Orders table with status badges
-* Search + filter
-* Clean data representation
+- Orders table with status badges
+- Search + filter
+- Clean data representation
 
 ### ⚙️ Settings
 
-* Profile update
-* Password change
-* Theme toggle (Dark / Light)
-* Preferences
+- Profile update
+- Password change
+- Theme toggle (Dark / Light)
+- Preferences
 
 ---
 
 ## 🧩 Tech Stack
 
-* **React (Vite)**
-* **Tailwind CSS v4**
-* **Recharts (Charts)**
-* **React Router DOM**
-* **Lucide Icons**
+- **React (Vite)**
+- **Tailwind CSS v4**
+- **Recharts (Charts)**
+- **React Router DOM**
+- **Lucide Icons**
 
 ---
 
 ## 🎨 UI Features
 
-* Dark / Light mode (persistent)
-* Responsive design (mobile + desktop)
-* Reusable components (Table, Modal, Button)
-* Clean design system using CSS variables
+- Dark / Light mode (persistent)
+- Responsive design (mobile + desktop)
+- Reusable components (Table, Modal, Button)
+- Clean design system using CSS variables
 
 ---
 
 ## 🧠 Key Concepts Implemented
 
-* State lifting & prop drilling
-* Reusable UI components
-* CRUD operations (Create, Read, Update, Delete)
-* Data formatting (ISO → UI)
-* Modular folder structure
-* Responsive layouts
+- State lifting & prop drilling
+- Reusable UI components
+- CRUD operations (Create, Read, Update, Delete)
+- Data formatting (ISO → UI)
+- Modular folder structure
+- Responsive layouts
 
 ---
 
@@ -104,7 +104,7 @@ src/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dashboard-ui.git
+git clone https://github.com/Shahbaz7307/dashboard-ui.git
 cd dashboard-ui
 npm install
 npm run dev
@@ -124,12 +124,12 @@ npm run build
 
 ## 📌 Future Improvements
 
-* Authentication system (Login/Register)
-* API integration (real backend)
-* Role-based access control
-* Advanced charts & analytics
-* Toast notifications
-* Export / import data
+- Authentication system (Login/Register)
+- API integration (real backend)
+- Role-based access control
+- Advanced charts & analytics
+- Toast notifications
+- Export / import data
 
 ---
 
@@ -137,8 +137,8 @@ npm run build
 
 **Shahbaz Shabbir Malik**
 
-* LinkedIn: https://www.linkedin.com/in/shahbaz-shabbir-malik
-* GitHub: https://github.com/YOUR_USERNAME
+- LinkedIn: https://www.linkedin.com/in/shahbaz-shabbir-malik
+- GitHub: https://github.com/Shahbaz7307
 
 ---
 
