@@ -3,6 +3,7 @@ import { Eye, Trash2, Pencil } from "lucide-react";
 import Button from "../ui/Button";
 import Table from "../ui/Table";
 import { formatDisplayDate } from "../../utils/date";
+import TableSkeleton from "../ui/TableSkeleton";
 
 const statusStyles = {
   running: "bg-primary/10 text-primary",
@@ -97,11 +98,7 @@ const RecentProjects = ({ projects, loading, onDelete, onEdit }) => {
   ];
 
   if (loading) {
-    return (
-      <div className="bg-card border border-border rounded-xl p-6">
-        <p className="text-text-secondary animate-pulse">Loading projects...</p>
-      </div>
-    );
+    return <TableSkeleton />;
   }
 
   return (

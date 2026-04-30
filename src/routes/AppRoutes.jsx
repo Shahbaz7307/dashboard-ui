@@ -1,19 +1,24 @@
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
-import Users from "../pages/Users";
-import Settings from "../pages/Settings";
+import { lazy, Suspense } from "react";
 import DashboardLayout from "../layout/DashboardLayout";
-import Orders from "../pages/Orders";
+import Loader from "../components/ui/Loader";
+
+const Dashboard = lazy(() => import("../pages/Dashboard"));
+const Users = lazy(() => import("../pages/Users"));
+const Orders = lazy(() => import("../pages/Orders"));
+const Settings = lazy(() => import("../pages/Settings"));
 
 export default function AppRoutes() {
   return (
-    <Routes>
-      <Route path="/" element={<DashboardLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="users" element={<Users />} />
-        <Route path="orders" element={<Orders />} />
-        <Route path="settings" element={<Settings />} />
-      </Route>
-    </Routes>
+    <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route path="/" element={<DashboardLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="users" element={<Users />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }

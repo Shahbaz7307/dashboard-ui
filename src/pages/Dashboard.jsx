@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { lazy, useEffect, useState } from "react";
 import Header from "../components/dashboard/Header";
 import StatsGrid from "../components/dashboard/StatsGrid";
 import HighlightCard from "../components/dashboard/HighlightCard";
@@ -6,7 +6,7 @@ import RecentProjects from "../components/dashboard/RecentProjects";
 import AddProjectModal from "../components/dashboard/AddProjectModal";
 import { fetchProjects } from "../api/projects";
 import ConfirmModal from "../components/ui/ConfirmModal";
-import ChartsSection from "../components/dashboard/ChartsSection";
+const ChartsSection = lazy(() => import("../components/dashboard/ChartsSection"));
 
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

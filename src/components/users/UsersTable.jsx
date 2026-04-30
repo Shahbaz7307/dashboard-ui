@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Pencil, Trash2 } from "lucide-react";
 import Table from "../ui/Table";
+import TableSkeleton from "../ui/TableSkeleton";
 
 const UsersTable = ({ users, loading, onDelete, onEdit }) => {
   const [search, setSearch] = useState("");
@@ -50,8 +51,7 @@ const UsersTable = ({ users, loading, onDelete, onEdit }) => {
     },
   ];
 
-  if (loading) return <p>Loading users...</p>;
-
+  if (loading) return <TableSkeleton />;
   return (
     <div className="bg-card border border-border rounded-xl p-4 space-y-4">
       <input

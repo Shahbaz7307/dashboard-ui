@@ -7,6 +7,9 @@
 @theme {
   --font-sans: "Inter", sans-serif;
 
+  /* Light */
+  --color-skeleton: #e5e7eb;
+
   /* Base */
   --color-background: #f6f7f9;
   --color-surface: #ffffff;
@@ -37,6 +40,8 @@
 
 /* 🌙 DARK THEME */
 .dark {
+  --color-skeleton: #1f2937;
+
   --color-background: #0b150e;
   --color-surface: #111827;
   --color-border: #1f2937;
@@ -70,4 +75,17 @@ body {
 button,
 a {
   cursor: pointer;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
 }

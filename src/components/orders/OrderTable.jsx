@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Trash2 } from "lucide-react";
 import Table from "../ui/Table";
+import TableSkeleton from "../ui/TableSkeleton";
 
 const statusStyles = {
   pending: "bg-warning/10 text-warning",
@@ -77,8 +78,7 @@ const OrdersTable = ({ orders, loading, onDelete }) => {
     },
   ];
 
-  if (loading) return <p>Loading orders...</p>;
-
+  if (loading) return <TableSkeleton />;
   return (
     <div className="bg-card border border-border rounded-xl p-4 space-y-4">
       <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
