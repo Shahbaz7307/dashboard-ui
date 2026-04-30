@@ -1,16 +1,147 @@
-# React + Vite
+# 🚀 Dashboard UI (Admin Panel)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive **Admin Dashboard** built with **React + Vite + Tailwind CSS v4**.
+This project demonstrates real-world frontend architecture including CRUD operations, charts, reusable components, and dark/light theme support.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+👉 Add your deployed link here (Vercel)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> Add screenshots here (Dashboard, Users, Orders, Settings)
+
+---
+
+## ✨ Features
+
+### 📊 Dashboard
+
+* Stats overview cards
+* Highlight section
+* Recent projects table
+* Charts (Recharts)
+* Search, filter, pagination
+
+### 👤 Users Management
+
+* Add / Edit / Delete users
+* Search users
+* Modal-based forms
+
+### 📦 Orders Management
+
+* Orders table with status badges
+* Search + filter
+* Clean data representation
+
+### ⚙️ Settings
+
+* Profile update
+* Password change
+* Theme toggle (Dark / Light)
+* Preferences
+
+---
+
+## 🧩 Tech Stack
+
+* **React (Vite)**
+* **Tailwind CSS v4**
+* **Recharts (Charts)**
+* **React Router DOM**
+* **Lucide Icons**
+
+---
+
+## 🎨 UI Features
+
+* Dark / Light mode (persistent)
+* Responsive design (mobile + desktop)
+* Reusable components (Table, Modal, Button)
+* Clean design system using CSS variables
+
+---
+
+## 🧠 Key Concepts Implemented
+
+* State lifting & prop drilling
+* Reusable UI components
+* CRUD operations (Create, Read, Update, Delete)
+* Data formatting (ISO → UI)
+* Modular folder structure
+* Responsive layouts
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+  components/
+    dashboard/
+    users/
+    orders/
+    settings/
+    ui/
+  pages/
+    Dashboard.jsx
+    Users.jsx
+    Orders.jsx
+    Settings.jsx
+  layout/
+  routes/
+  utils/
+  api/
+```
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/dashboard-ui.git
+cd dashboard-ui
+npm install
+npm run dev
+```
+
+---
+
+## 🚀 Deployment
+
+Recommended: **Vercel**
+
+```bash
+npm run build
+```
+
+---
+
+## 📌 Future Improvements
+
+* Authentication system (Login/Register)
+* API integration (real backend)
+* Role-based access control
+* Advanced charts & analytics
+* Toast notifications
+* Export / import data
+
+---
+
+## 👨‍💻 Author
+
+**Shahbaz Shabbir Malik**
+
+* LinkedIn: https://www.linkedin.com/in/shahbaz-shabbir-malik
+* GitHub: https://github.com/YOUR_USERNAME
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
