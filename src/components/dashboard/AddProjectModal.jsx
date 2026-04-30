@@ -28,7 +28,6 @@ const AddProjectModal = ({ isOpen, onClose, onAdd, onUpdate, editData }) => {
       });
     }
 
-    // reset
     setName("");
     setStatus("running");
     setDue("");

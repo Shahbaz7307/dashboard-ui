@@ -1,10 +1,4 @@
-import {
-  PieChart,
-  Pie,
-  Cell,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
 const COLORS = {
   running: "#22c55e",
@@ -13,7 +7,6 @@ const COLORS = {
 };
 
 const StatusPieChart = ({ data }) => {
-  // Convert projects → chart data
   const chartData = ["running", "pending", "completed"].map((status) => ({
     name: status,
     value: data.filter((p) => p.status === status).length,
@@ -27,12 +20,7 @@ const StatusPieChart = ({ data }) => {
 
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
-          <Pie
-            data={chartData}
-            dataKey="value"
-            outerRadius={80}
-            label
-          >
+          <Pie data={chartData} dataKey="value" outerRadius={80} label>
             {chartData.map((entry, index) => (
               <Cell key={index} fill={COLORS[entry.name]} />
             ))}

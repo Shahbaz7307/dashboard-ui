@@ -30,7 +30,6 @@ const RecentProjects = ({ projects, loading, onDelete, onEdit }) => {
     setPage(1);
   }, [search, filter]);
 
-  // 🔍 Filter
   const filteredData = projects.filter((item) => {
     const matchesSearch = item.name
       .toLowerCase()
@@ -41,7 +40,6 @@ const RecentProjects = ({ projects, loading, onDelete, onEdit }) => {
     return matchesSearch && matchesFilter;
   });
 
-  // 📄 Pagination
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
 
   const paginatedData = filteredData.slice(
@@ -107,7 +105,6 @@ const RecentProjects = ({ projects, loading, onDelete, onEdit }) => {
     },
   ];
 
-  // ⏳ Loading
   if (loading) {
     return (
       <div className="bg-card border border-border rounded-xl p-6">
@@ -118,7 +115,6 @@ const RecentProjects = ({ projects, loading, onDelete, onEdit }) => {
 
   return (
     <div className="bg-card border border-border rounded-xl p-4 shadow-[var(--shadow-card)] space-y-4">
-      {/* Controls */}
       <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
         <input
           type="text"
@@ -140,7 +136,6 @@ const RecentProjects = ({ projects, loading, onDelete, onEdit }) => {
         </select>
       </div>
 
-      {/* Table */}
       {filteredData.length === 0 ? (
         <div className="text-center py-10 text-text-secondary">
           No projects found
@@ -149,7 +144,6 @@ const RecentProjects = ({ projects, loading, onDelete, onEdit }) => {
         <Table columns={columns} data={paginatedData} />
       )}
 
-      {/* Pagination */}
       <div className="flex justify-between items-center">
         <p className="text-sm text-text-secondary">
           Page {page} of {totalPages || 1}

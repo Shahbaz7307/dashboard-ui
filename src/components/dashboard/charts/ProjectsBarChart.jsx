@@ -8,7 +8,6 @@ import {
 } from "recharts";
 
 const ProjectsBarChart = ({ data }) => {
-  // Example grouping (fake months)
   const chartData = [
     { name: "Jan", projects: 4 },
     { name: "Feb", projects: 6 },
