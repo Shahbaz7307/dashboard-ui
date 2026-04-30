@@ -7,7 +7,7 @@ This project demonstrates real-world frontend architecture including CRUD operat
 
 ## 🌐 Live Demo
 
-👉 Add your deployed link here (Vercel)
+👉 [View Live Demo](https://dashboard-ui.vercel.app)
 
 ---
 
