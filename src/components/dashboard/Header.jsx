@@ -6,7 +6,7 @@ const Header = ({ onAddClick }) => {
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div>
         <h1 className="text-2xl font-semibold text-text-primary">
-          Welcome back, Shahbaz 👋
+          Welcome back, Mark 👋
         </h1>
         <p className="text-sm text-text-secondary">
           Plan, prioritize and accomplish your tasks

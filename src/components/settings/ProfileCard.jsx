@@ -2,8 +2,8 @@ import { useState } from "react";
 import Button from "../ui/Button";
 
 const ProfileCard = () => {
-  const [name, setName] = useState("Shahbaz");
-  const [email, setEmail] = useState("shahbaz@email.com");
+  const [name, setName] = useState("admin");
+  const [email, setEmail] = useState("admin@gmail.com");
 
   const handleSave = () => {
     console.log({ name, email });

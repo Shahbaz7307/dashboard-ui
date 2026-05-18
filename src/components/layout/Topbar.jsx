@@ -20,9 +20,9 @@ const Topbar = ({ collapsed, setCollapsed }) => {
 
         <div className="flex items-center gap-2 cursor-pointer">
           <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-semibold">
-            S
+            M
           </div>
-          <span className="text-sm font-medium hidden sm:block">Shahbaz</span>
+          <span className="text-sm font-medium hidden sm:block">Mark</span>
         </div>
       </div>
     </div>
